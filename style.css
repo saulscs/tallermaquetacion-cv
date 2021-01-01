@@ -356,7 +356,7 @@ progress::-moz-progress-bar{
     background-color: var(--first-alpha-color);
     opacity: 0;
     pointer-events: none;
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .portfolio-card:hover .portfolio-card-info{
@@ -389,6 +389,14 @@ progress::-moz-progress-bar{
 }
 
 @media screen and (min-width:768px){
+    .portfolio > .container{
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+    }
+
+    .portfolio .section-title{
+        grid-column: span 2; 
+    }
     .services > .container{
          display: grid;
          grid-template-columns: repeat(2, 45%);
@@ -414,6 +422,14 @@ progress::-moz-progress-bar{
         padding: 0.5rem;
         height: calc(var(--header-hight) - 0.5rem);
 
+    }
+
+    .portfolio > .container{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .portfolio .section-title{
+        grid-column: span 3; 
     }
 
     .services > .container{
