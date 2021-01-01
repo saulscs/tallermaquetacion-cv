@@ -220,6 +220,11 @@ progress::-moz-progress-bar{
 
 
 /******* Utilities ******/
+
+.bg-gray-light{
+    background-color: var(--gray-light-color);
+}
+
 .box-shadow-1 {
     box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
 }
@@ -254,6 +259,15 @@ progress::-moz-progress-bar{
     padding: 2rem 1rem;
 }
 
+.section-title{
+    border-top: thin solid var(--first-color);
+    border-bottom: thin solid var(--first-color);
+    width: 250px;
+    margin: 2rem auto;
+    padding: .5rem 1rem;
+    text-align: center;
+    color: var(--title-color);
+}
 .text-center {
     text-align: center;
   }
@@ -317,8 +331,74 @@ progress::-moz-progress-bar{
     text-decoration: none;
 }
 
-@media screen and (min-width:768px){
+/*Portfolio*/
 
+.portfolio-card{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.portfolio-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portfolio-card-info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    background-color: var(--first-alpha-color);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s ease-in-out;
+}
+
+.portfolio-card:hover .portfolio-card-info{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.portfolio-card-info > div{
+    padding: 1rem;
+    border: thin solid var(--white-color);
+    width: 100%;
+    height: 100%;
+}
+
+/*Services*/
+
+.service-card{
+    margin: 1rem auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.service-card svg{
+    fill: var(--first-color);
+    margin-bottom: 1.25rem;
+}
+
+.service-card h3{
+    color: var(--title-color);
+}
+
+@media screen and (min-width:768px){
+    .services > .container{
+         display: grid;
+         grid-template-columns: repeat(2, 45%);
+         justify-content: space-between;
+         align-content: center;
+    }
+
+    .services .section-title{
+        grid-column: span 2; 
+    }
 }
 
 @media screen and (min-width:1024px){
@@ -335,4 +415,14 @@ progress::-moz-progress-bar{
         height: calc(var(--header-hight) - 0.5rem);
 
     }
+
+    .services > .container{
+        
+        grid-template-columns: repeat(3, 30%);
+        
+   }
+
+   .services .section-title{
+       grid-column: span 3; 
+   }
 }
