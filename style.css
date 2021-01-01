@@ -16,7 +16,7 @@
     --text-color:#222222;
     --white-alpha-color:rgba(255, 255, 255, 0.5);
     --black-alpha-color:rgba(0, 0, 0, 0.5);
-    --font: "Relaway"sans-serif;
+    --font: "Raleway", sans-serif;
     --max-width: 1200px;
     --header-hight: 4rem;
 }
@@ -88,6 +88,32 @@ p{
 }
 
 /******* Components ******/
+
+
+/*Hero*/
+
+.hero-image{
+    background-image: var(--image);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: var(--hero-attachment);
+}
+
+.hero-image-opacity{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--hero-opacity-color);
+}
+
+.hero-image-title{
+    font-size: 7.5vw;
+    color: var(--hero-text-color);
+}
 
 /*Menu*/
 
@@ -164,6 +190,18 @@ p{
 /******* Utilities ******/
 .box-shadow-1{
     box-shadow: .25rem .25rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+.btn{
+    border-radius: .5rem;
+    padding: 1rem;
+    display: inline-block;
+    width: 200px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: var(--white-color);
+    background-color: var(--first-color);
 }
 
 .container{
