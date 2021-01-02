@@ -91,28 +91,12 @@ p{
 
 /*Carousel*/
 
-@keyframes carousel-slide{
-    0%{
-        transform: translateX(0%);
-    }
 
-    25%{
-        transform: translateX(-25%);
-    }
-
-    50%{
-        transform: translateX(-50%);
-    }
-
-    75%{
-        transform: translateX(-75%);
-    }
-}
 
 .carousel{
     margin: 2rem auto;
     padding: 2rem 0;
-    max-width: 800px;
+    max-width: 300px;
     text-align: center;
     overflow-x: hidden;
     background-color: var(--carousel-bg-color);
@@ -125,7 +109,7 @@ p{
     width: 400%;
     list-style: none;
     transition: transform .5s ease-in-out;
-    animation: carousel-slide 12s ease-in-out 3s;
+    
 
 }
 
@@ -232,6 +216,12 @@ p{
 .menu a:hover{
     color: var(--white-color);
     background-color: var(--first-color);
+}
+
+@media screen and (min-width:768px){
+    .carousel{
+        max-width: 800px;
+    }
 }
 
 @media screen and (min-width:1024px){
@@ -427,6 +417,26 @@ progress::-moz-progress-bar{
     margin-bottom: 2rem;
 }
 
+.contact-card{
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 100%;
+    height: 144px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact-card > svg{
+    width: 2rem;
+    height: 2rem;
+    fill: var(--first-color);
+}
+
+.contact-card > small{
+    margin-top: -1rem;
+}
 /*Header*/
 
 .header{
@@ -537,8 +547,22 @@ progress::-moz-progress-bar{
     color: var(--title-color);
 }
 
+.social-media a{
+    text-decoration: none;
+    padding: 0.4rem;
+}
+
+.social-media svg{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
 @media screen and (min-width:768px){
-    
+    .contact-cards{
+        display: grid;
+        grid-template-columns: repeat(2, 48%);
+        justify-content: space-between;
+    }
     .portfolio > .container{
         display: grid;
         grid-template-columns: repeat(2,50%);
@@ -570,11 +594,15 @@ progress::-moz-progress-bar{
 }
 
 @media screen and (min-width:1024px){
+    
     .about{
         display: grid;
         grid-template-columns: repeat(3, 30%);
         justify-content: space-between;
         align-content: center;
+    }
+    .contact-cards{
+      grid-template-columns: repeat(4, 24%);  
     }
     .header{
         position: sticky;
