@@ -522,6 +522,16 @@ progress::-moz-progress-bar{
 .contact-card > small{
     margin-top: -1rem;
 }
+
+/*Footer*/
+.footer{
+    margin-bottom: var(--header-hight);
+    padding: .5rem;
+    text-align: center;
+    color: var(--white-color);
+    background-color: var(--third-color);
+}
+
 /*Header*/
 
 .header{
@@ -713,5 +723,9 @@ progress::-moz-progress-bar{
 
    .services .section-title{
        grid-column: span 3; 
+   }
+
+   .footer{
+       margin-bottom: 0;
    }
 }
